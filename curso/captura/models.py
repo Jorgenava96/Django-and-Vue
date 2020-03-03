@@ -72,7 +72,7 @@ class Expediente(models.Model):
     fecha_firma = models.DateField()
     observaciones = models.CharField(max_length=200)
     materia = models.ForeignKey(Materia, null=False, blank=False, on_delete=models.CASCADE)
-    servidor = models.ForeignKey(Servidor, null=True, blank=True, on_delete=models.CASCADE)
+    Juez = models.ForeignKey(Juez, null=True, blank=True, on_delete=models.CASCADE)
     tipo_juicio = models.ForeignKey(Tipo_juicio, null=True, blank=True, on_delete=models.CASCADE)
     tipo_resolucion = models.ForeignKey(Tipo_resolucion, null=True, blank=True, on_delete=models.CASCADE)
     estatus = models.ForeignKey(Estatus, null=True, blank=True, on_delete=models.CASCADE)
